@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GridActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgRestoranKategori"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"/>
+            <TextView
+                android:id="@+id/textRestoranJudul"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/terpopuler_minggu_ini"/>
+            <TextView
+                android:id="@+id/textRestoranOutlet"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/_8_outlet_disimpan_1232_kali"/>
+            <TextView
+                android:id="@+id/textRestoranKeterangan"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/restoran_terpopuler_di_kotamu_minggu_ini" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gridRecycler"
+        android:layout_below="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/grid_layout"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

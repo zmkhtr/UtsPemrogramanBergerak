@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:orientation="vertical">
+
+
+
+    <ImageView
+        android:id="@+id/imageDetailGambar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/textDetailRating"
+        android:layout_below="@id/imageDetailGambar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textColor="#fff"
+        android:text="@string/_3_5"
+        android:layout_margin="15dp"
+        android:textSize="20sp"
+        android:padding="3dp"
+        android:background="#57D348"/>
+
+    <LinearLayout
+        android:layout_below="@+id/imageDetailGambar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/textDetailNamaResto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/specialty_s"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:padding="3dp"/>
+    <TextView
+        android:id="@+id/textDetailJenisMakanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kafe_kafe_kue_roti"
+        android:padding="5dp"/>
+    <TextView
+        android:id="@+id/textDetailAlamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/_645_ellis_street_mountain_view_94043"/>
+    <TextView
+        android:id="@+id/textDetailJamBuka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/buka_besok_pada_5_30am"/>
+
+    </LinearLayout>
+</RelativeLayout>

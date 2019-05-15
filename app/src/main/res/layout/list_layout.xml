@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/listImage"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        android:padding="5dp"/>
+    <LinearLayout
+        android:layout_toRightOf="@+id/listImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@+id/listImage">
+
+        <TextView
+            android:id="@+id/listJudulKategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/terpopuler_minggu_ini"/>
+        <TextView
+            android:id="@+id/listOutletKategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_8_outlet_disimpan_1232_kali"/>
+        <TextView
+            android:id="@+id/listKeteranganKategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/restoran_terpopuler_di_kotamu_minggu_ini" />
+
+    </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
