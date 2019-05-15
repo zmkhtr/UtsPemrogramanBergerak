@@ -1,11 +1,14 @@
 package com.sipemandu.utspemrogramanbergerak;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,6 +30,7 @@ public class DetailActivity extends AppCompatActivity {
 
         initVieww();
         setData();
+        upButton();
     }
 
     public void initVieww(){
@@ -37,6 +41,20 @@ public class DetailActivity extends AppCompatActivity {
         mJenisMakanan = findViewById(R.id.textDetailJenisMakanan);
         mJamBuka = findViewById(R.id.textDetailJamBuka);
         mRating = findViewById(R.id.textDetailRating);
+    }
+
+    public void upButton(){
+        ActionBar ab = getSupportActionBar();
+        ab.setTitle("Zomato");
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setElevation(0);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main_bar, menu);
+        return true;
     }
 
     public void setData(){

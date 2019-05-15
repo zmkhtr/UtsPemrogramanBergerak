@@ -12,4 +12,12 @@
     <string name="kafe_kafe_kue_roti"><![CDATA[KAFE - KAFE, KUE & ROTI]]></string>
     <string name="_645_ellis_street_mountain_view_94043">645 Ellis Street, Mountain View 94043</string>
     <string name="buka_besok_pada_5_30am">- Buka besok pada 5:30am</string>
+    <string name="koleksi_terpilih_20">Koleksi Terpilih (20)</string>
+    <string name="disimpan_0">Disimpan (0)</string>
+    <string name="milik_saya_0">Milik saya (0)</string>
+    <string name="arsip">Arsip</string>
+    <string name="pernah">Pernah</string>
+    <string name="bagi">Bagi</string>
+    <string name="add_review">Add Review</string>
+    <string name="rate_this_place">Rate this place:</string>
 </resources>

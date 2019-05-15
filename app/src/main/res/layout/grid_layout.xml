@@ -27,7 +27,7 @@
                 android:textColor="#fff"
                 android:textSize="20sp"
                 android:padding="3dp"
-                android:background="#57D348"
+                android:background="#98cd37"
                 android:layout_alignParentRight="true" />
         </RelativeLayout>
 

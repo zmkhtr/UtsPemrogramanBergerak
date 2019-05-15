@@ -1,5 +1,6 @@
 package com.sipemandu.utspemrogramanbergerak;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +11,8 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,6 +34,7 @@ public class GridActivity extends AppCompatActivity implements GridRecyclerAdapt
     private GridRecyclerAdapter mAdapter;
     private RecyclerView mRecycler;
     private List<Restoran> mRestoran;
+    private String judul;
 
 
     @Override
@@ -40,11 +44,18 @@ public class GridActivity extends AppCompatActivity implements GridRecyclerAdapt
 
         initView();
         setData();
-        initRecycler();
+        initRecycler(judul);
+        upButton();
     }
 
-    public void initRecycler(){
-        mRestoran = DataSource.createRestoranList();
+    public void initRecycler(String judul){
+        if (judul.equals("Terpopuler Minggu Ini")){
+            mRestoran = DataSource.createRestoranMingguIniList();
+        } else if (judul.equals("Sarapan Pagi")) {
+            mRestoran = DataSource.createRestoranSarapanPagiList();
+        } else if (judul.equals("Jajanan Malam")) {
+            mRestoran = DataSource.createRestoranJajananMalamList();
+        }
         mRecycler = findViewById(R.id.gridRecycler);
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new GridLayoutManager(this, 2));
@@ -63,7 +74,7 @@ public class GridActivity extends AppCompatActivity implements GridRecyclerAdapt
 
     public void setData(){
         Intent i = getIntent();
-        String judul = i.getStringExtra("JUDUL_CAT");
+        judul = i.getStringExtra("JUDUL_CAT");
         String outlet = i.getStringExtra("OUTLET_CAT");
         String keterangan = i.getStringExtra("KETERANGAN_CAT");
         mJudul.setText(judul);
@@ -75,6 +86,20 @@ public class GridActivity extends AppCompatActivity implements GridRecyclerAdapt
                 .load(i.getStringExtra("URL_CAT"))
                 .into(mImageCategori);
 
+    }
+
+    public void upButton(){
+        ActionBar ab = getSupportActionBar();
+        ab.setTitle("Zomato");
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setElevation(0);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main_bar, menu);
+        return true;
     }
 
     @Override

@@ -24,6 +24,9 @@
         android:layout_toEndOf="@+id/listImage">
 
         <TextView
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
             android:id="@+id/listJudulKategori"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,6 +37,8 @@
             android:layout_height="wrap_content"
             android:text="@string/_8_outlet_disimpan_1232_kali"/>
         <TextView
+            android:textColor="#000"
+            android:layout_marginTop="5dp"
             android:id="@+id/listKeteranganKategori"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
